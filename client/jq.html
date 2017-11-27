@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Home</title>
+  	<link href="css/style.css" rel="stylesheet" >
+  	<link href="css/bootstrap.min.css" rel="stylesheet" >
+</head>
+
+<body class="own-style own-margin">
+	<header id="header" class="container-fluid">
+		<div class="login-bar">
+			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
+			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Login</button>
+		</div>
+	</header>
+
+	<input type="text" id="name">
+	<button id="add">add</button>
+	<button id="remove">remove</button>
+	<button id="edit">edit</button><br>
+	<select id="select" size="4">
+		
+	</select>
+	<form method="post" action="API.php" id="ajaxForm">
+		<input type="text" id="txtHoten">
+		<button type="submit">submit</button>
+	</form>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/intern.js"></script>
+</body>
+</html>
+
+<!--
+	<form class="radius-5 form-modified">		  	
+			<div class="text-center mb-30" >
+				<h2 class="font-w-300 fs-42 color-white ">Sign In</h2>
+				<p class="text-center color-gray fs-17 line-h ">Process results from a change in the energy level of the nucleus</p>			
+			</div>
+		  	
+		  	<p class="m-0"><input class="input input-sm w-full radius-5 color-white mb-20" placeholder="Username" type="text"></p>
+
+		  	
+			<p class="m-0"><input class="input input-sm w-full radius-5 color-white	mb-20" placeholder="Password" type="password"></p>
+
+			<div class="mb-20">
+				<label class="checkbox">
+				  <input type="checkbox">
+				  <span></span>
+					Remember me
+				</label>
+				<a href="#" class="btn btn-sm btn-primary radius-5">Sign in</a>						
+			</div>
+		  
+		  	<p class="text-center mt-30"><a href="#" class="btn btn-info w-full radius-5">Via Facebook</a></p>		  	
+		</form>
+
+
+
+
+
+		<form class="modal-content animate" action="/action_page.php">
+	    <div class="imgcontainer">
+	      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+	      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+	    </div>
+
+	    <div class="">
+	      <label><b>Username</b></label>
+	      <input type="text" placeholder="Enter Username" name="uname" required>
+
+	      <label><b>Password</b></label>
+	      <input type="password" placeholder="Enter Password" name="psw" required>
+	        
+	      <button type="submit">Login</button>
+	      <input type="checkbox" checked="checked"> Remember me
+	    </div>
+
+	    <div class="" style="background-color:#f1f1f1">
+	      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	      <span class="psw">Forgot <a href="#">password?</a></span>
+	    </div>
+	  </form>		
+		-->
