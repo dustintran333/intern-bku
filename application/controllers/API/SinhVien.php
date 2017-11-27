@@ -7,6 +7,8 @@
  * Time: 10:51 PM
  */
 //echo "<pre>";
+require(APPPATH.'libraries/REST_Controller.php');
+use Restserver\Libraries\REST_Controller;
 class SinhVien extends REST_Controller
 {
 	public function __construct()
@@ -14,8 +16,7 @@ class SinhVien extends REST_Controller
 		parent::__construct();
 		$this->load->model('msinhvien');
 		$this->load->model('muser');
-		$this->load->helper('url_helper');
-		$this->load->helper('url');
+		$this->load->model('auth');
 	}
 	/*Code:
 		0: Fail
@@ -33,7 +34,7 @@ class SinhVien extends REST_Controller
 		return compact("msg","code","data"); //create assoc array with key = var names
 	}
 	public function index_get(){
-		$id = $this->get('id');
+		$id = $this->get('id'); //var_dump($id);
 		$data = $this->prepare_json($this->msinhvien->get_full($id));
 		$this->response($data);
 		/*
