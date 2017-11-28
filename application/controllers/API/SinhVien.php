@@ -17,6 +17,9 @@ class SinhVien extends REST_Controller
 		$this->load->model('msinhvien');
 		$this->load->model('muser');
 		$this->load->model('auth');
+		if(!$this->auth->checkLogin()){
+			$this->response();
+		}
 	}
 	/*Code:
 		0: Fail

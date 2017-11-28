@@ -22,13 +22,15 @@ class MSinhVien extends CI_Model
 		$query = $this->db->get_where($this->table, ['ma_so' => $id]);
 		return $query->row_array(); //single result
 	}
-	public function get_full()
+	public function get_full($id)
 	{
 		$db = &$this->db;
-		$db->select();
-		$db->from("sinh_vien");
-		$db->join("user","sinh_vien.ma_so = user.ma_so");
-		return $db->get()->result_array();
+		$db->select()
+			->from("sinh_vien")
+			->join("user","sinh_vien.ma_so = user.ma_so")
+			->where(["sinh_vien.ma_so" => $id]);
+
+		return $id?$db->get()->row_array():$db->get()->result_array();
 	}
 	public function update($id,$data)
 	{

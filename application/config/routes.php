@@ -57,9 +57,11 @@ $route['translate_uri_dashes'] = FALSE;
 $route['default_controller'] = 'main';
 
 /*-----RESTFUL like URI-----*/
+/*
 $route['api/sinhvien/']['post']='api/sinhvien/add';
-$route['api/sinhvien/(:num)']['get'] = 'api/sinhvien/view/$1';
-$route['api/sinhvien/(:num)']['delete']='api/sinhvien/delete/$1';
-$route['api/sinhvien/(:num)']['put']='api/sinhvien/edit/$1';
 
+$route['api/sinhvien/(:num)']['get'] = 'api/sinhvien/$1';
+$route['api/sinhvien/(:num)']['delete']='api/sinhvien/$1';
+$route['api/sinhvien/(:num)']['put']='api/sinhvien/$1';
+*/
 //$route['sinhvien/'] = 'index';
