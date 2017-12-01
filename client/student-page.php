@@ -1,12 +1,16 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Student page</title>
+  	<?php include 'reference.php' ?>
+</head>
 
 <body class="own-style own-margin">
-	<header id="header" class="container-fluid">
-		<div class="login-bar">
-			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
-			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log out</button>
-		</div>
-	</header>
+	<?php include 'header-login-student.php' ?>
 
 	<div class="container-fluid">
 	
@@ -149,7 +153,8 @@
 			<!--------------Kết quả thực tập------------>								
 		</div>
 	</div>
-	<!--------------EndHorizontalTabPanel-------------->	
+	<!--------------EndHorizontalTabPanel-------------->
+	<?php include 'footer.php' ?>		
 	<?php include 'scripts.php' ?>
 </body>
 </html>
