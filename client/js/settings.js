@@ -109,7 +109,8 @@ function enablePopover2(){
             left:   e.pageX - $('.popover').width()/2.0
         })
 
-        /*--Control button actions--*/
+        /*--Control button actions--*/        
+
         $('.btnView2').click(function(){
             //alert('fire AJAX with cur_id: '+ cur_id);
             selectNavtabs("tab-7");

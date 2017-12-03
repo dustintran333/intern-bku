@@ -6,7 +6,7 @@
   	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
   	<title>BK Intern management system - Admin config</title>
-  	<?php include 'reference.php' ?>
+  	<?php include 'referrence.php' ?>
 </head>
 
 
@@ -27,6 +27,7 @@
 	<!-------Popover button template------>
 	<div style="display: none" id="btnMenu2">
 		<div class="btn-group btn-group-xs" role="group" >
+			<button id="" type="button" class="btn btn-sm btnAdd btn-success1">Thêm</button>
 			<button id="" type="button" class="btn btn-sm btnView2 btn-success1">Xem</button>
 			<button id="" type="button" class="btn btn-sm btnEdit2 btn-primary1">Sửa</button>
 			<button id="delete2" type="button" class="btn btn-sm btnDelete2 btn-danger1">Xoá</button>
@@ -106,6 +107,10 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="form-group col-md-12">
+					<p class=""><button class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
+				</div>
 			</div>
 			<!--------------End danh sach sinh vien------------>
 			<!--------------danh sach doanh nghiep-------------->
@@ -130,8 +135,7 @@
 							<table id="" class="table table-striped table-hover table-condensed">
 								<thead>
 									<tr class="bg-primary">
-										<th>Số thứ tự</th>
-										<th>Username</th>
+										<th>Số thứ tự</th>										
 										<th>Doanh nghiệp</th>
 										<th>Enable/Disable</th>										
 										<th>Số lượng SV tối đa</th>
@@ -140,16 +144,14 @@
 								</thead>
 								<tbody id="tableDN">
 									<tr data-toggle="popover2">
-										<td>001</td>
-										<td>vng001</td>
+										<td>001</td>										
 										<td>VNG</td>
 										<td>Enable</td>
 										<td>43</td>
 										<td>10</td>
 									</tr>
 									<tr data-toggle="popover2">
-										<td>002</td>
-										<td>fpt001</td>
+										<td>002</td>									
 										<td>FPT</td>
 										<td>Enable</td>
 										<td>20</td>
@@ -159,6 +161,10 @@
 							</table>
 						</div>
 					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<p class=""><button class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
 				</div>
 			</div>
 			<!--------------End_danh sach doanh nghiep------------>
@@ -228,12 +234,7 @@
 			<!--------------End sửa student------------>
 			<!--------------Sửa doanh nghiệp------------>
 			<div class="tab-pane" role="tabpanel" id="tab-5" style="margin: 0 auto; max-width: 600px">
-				<h3>Hiệu chỉnh doanh nghiệp</h3>
-
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 120px;"><span>User</span></div>
-					<input name="user_dn" class="form-control" type="text" style="" placeholder="" disabled>
-				</div>				
+				<h3>Hiệu chỉnh doanh nghiệp</h3>			
 											
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>Doanh nghiệp</span></div>
@@ -249,11 +250,11 @@
 				<p><input type="file" name="logo" accept="image/*" style="display: inline-block"></span></p>
 
 				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
+					<textarea rows="6" name="editor1" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
 				</div>
 
 				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
+					<textarea rows="6" name="editor2" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
 				</div>
 
 				<div class="form-group col-md-12">
@@ -360,6 +361,32 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h4>Danh sách Admin doanh nghiệp</h4>
+						<select size="5" name="admin-list" style="border-radius: 5PX; height: 100px;">
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>							
+						</select>
+					</div>
+				</div>
 			</div>
 			<!--------------End chi tiet doanh nghiep------------>						
 		</div>
@@ -382,5 +409,10 @@
 	</div>
 	<?php include 'footer.php' ?>	
 	<?php include 'scripts.php' ?>
+	<script>
+		CKEDITOR.replace('editor1');
+		CKEDITOR.replace('editor2');
+
+	</script>
 </body>
 </html>

@@ -1,11 +1,16 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Company config</title>
+  	<?php include 'referrence.php' ?>
+</head>
+
 <body class="own-style own-margin">
-	<header id="header" class="container-fluid">
-		<div class="login-bar">
-			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
-			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log out</button>
-		</div>
-	</header>
+	<?php include 'header.php' ?>
 
 	
 	<!--------------HorizontalTabPanel-------------->
@@ -13,6 +18,7 @@
 		<a href="#" class="nav-tabs-dropdown btn btn-block btn-success">Tabs</a>
 		<ul class="nav nav-tabs nav-tabs-horizontal panel-heading text-center" id="nav-tabs-wrapper">
 			<li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
+			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên ứng tuyển</a></li>
 			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên ứng tuyển</a></li>			
 		</ul>
 		<div class="tab-content panel-body">
@@ -23,6 +29,11 @@
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>Số lượng SV tối đa</span></div>
 					<input class="form-control" type="number" style="" min="0" max="100" required value="0">
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Vị trí ứng tuyển</span></div>
+					<input class="form-control" type="text" style="">
 				</div>	
 
 				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
@@ -30,11 +41,11 @@
 				<div class="form-group">Deadline chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>														
 								
 				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
+					<textarea rows="6" name="editor1" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
 				</div>
 
 				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
+					<textarea rows="6" name="editor2" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
 				</div>
 
 				<p>(*)Chọn hình ảnh logo</p>
@@ -118,6 +129,12 @@
 		</div>
 	</div>
 	<!--------------EndHorizontalTabPanel-------------->
+	<?php include 'footer.php' ?>	
 	<?php include 'scripts.php' ?>
+	<script>
+		CKEDITOR.replace('editor1');
+		CKEDITOR.replace('editor2');
+
+	</script>
 </body>
 </html>

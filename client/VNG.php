@@ -1,4 +1,13 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Student page</title>
+  	<?php include 'referrence.php' ?>
+</head>
 
 <body class="own-style own-margin">
 	<?php include 'header.php' ?>
@@ -76,9 +85,15 @@
 				<h2 class="font-w-300 fs-42 color-white ">Đăng ký</h2>
 				<p class="text-center color-gray fs-17 line-h ">Đăng ký doanh nghiệp</p>			
 			</div>
+			<p>Vị trí ứng tuyển</p>
+			<select class="w-full" style="border-radius: 5px; height: 25px;">
+				<option value="">mobile developer</option>
+				<option value="">web developer</option>
+				<option value="">zalo developer</option>
+			</select>
 
-		  	<p>(*)Tập tin CV gửi kèm</p>
-			<p><input type="file" name="pic" accept="image/*" style="display: inline-block"></p>
+		  	<p class="mt-20">(*)Tập tin CV gửi kèm</p>
+			<p><input type="file"name="pic" accept="image/*" style="display: inline-block"></p>
  			
 			<div class="mt-20">				
 				<p class="text-center"><button type="submit" class="btn btn-sm btn-primary radius-5" style="width:40%;max-width:200px;">Đăng ký</button></p>					
@@ -86,6 +101,8 @@
 		</form>
 	</div>
 
+	<?php include 'footer.php' ?>
+		
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
@@ -101,5 +118,6 @@
 	    }
 	}	
 	</script>
+
 </body>
 </html>
