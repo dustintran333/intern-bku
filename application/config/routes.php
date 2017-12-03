@@ -64,4 +64,4 @@ $route['api/sinhvien/(:num)']['get'] = 'api/sinhvien/$1';
 $route['api/sinhvien/(:num)']['delete']='api/sinhvien/$1';
 $route['api/sinhvien/(:num)']['put']='api/sinhvien/$1';
 */
-//$route['sinhvien/'] = 'index';
+$route['logout'] = 'login/logout';

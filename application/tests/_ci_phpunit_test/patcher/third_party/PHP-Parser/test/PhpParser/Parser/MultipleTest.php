@@ -40,7 +40,7 @@ class MultipleTest extends ParserTest {
                 '<?php class Test { function function() {} }',
                 $this->getPrefer5(),
                 [
-                    new Stmt\Class_('Test', ['stmts' => [
+                    new Stmt\Class_('Login', ['stmts' => [
                         new Stmt\ClassMethod('function')
                     ]]),
                 ]

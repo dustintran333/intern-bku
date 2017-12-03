@@ -27,9 +27,8 @@ class MSinhVien extends CI_Model
 		$db = &$this->db;
 		$db->select()
 			->from("sinh_vien")
-			->join("user","sinh_vien.ma_so = user.ma_so")
-			->where(["sinh_vien.ma_so" => $id]);
-
+			->join("user","sinh_vien.ma_so = user.ma_so");
+		if($id) $db->where(["sinh_vien.ma_so" => $id]);
 		return $id?$db->get()->row_array():$db->get()->result_array();
 	}
 	public function update($id,$data)

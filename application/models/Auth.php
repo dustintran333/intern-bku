@@ -8,7 +8,7 @@
 define("LOGIN_NO_USERNAME",0);
 define("LOGIN_SUCCESS",1);
 define("LOGIN_WRONG_PASSWORD",2);
-define("LOGIN_ALREADY_LOGGED_IN",0);
+define("LOGIN_ALREADY_LOGGED_IN",3);
 class Auth extends CI_Model
 {
 	var $table = 'user';
@@ -29,6 +29,7 @@ class Auth extends CI_Model
 		$result =
 			$this->db->get_where($this->table,["username" => $username])
 			->row_array();
+//		var_dump($result,$username);
 		if(!$result["password"]) return LOGIN_NO_USERNAME;
 		if($password == $result["password"] )
 		{
@@ -40,10 +41,8 @@ class Auth extends CI_Model
 	public function logout(){
 		unset($_SESSION);
 		$this->session->sess_destroy();
+		makeOutput(['msg' => 'Successfully Logged Out', code => 1]);
 		//session_write_close();
-	}
-	public function checkAuth(){
-
 	}
 }
 ?>

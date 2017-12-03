@@ -59,7 +59,7 @@ class BuilderFactoryTest extends \PHPUnit_Framework_TestCase
 
                 ->addStmt($factory->method('anotherMethod')
                     ->makeProtected()
-                    ->addParam($factory->param('someParam')->setDefault('test'))
+                    ->addParam($factory->param('someParam')->setDefault('Login'))
                     ->addStmt(new Expr\Print_(new Expr\Variable('someParam'))))
 
                 ->addStmt($factory->property('someProperty')->makeProtected())

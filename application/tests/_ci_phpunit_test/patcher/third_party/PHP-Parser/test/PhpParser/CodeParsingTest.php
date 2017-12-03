@@ -55,7 +55,7 @@ class CodeParsingTest extends CodeTestAbstract
     }
 
     public function provideTestParse() {
-        return $this->getTests(__DIR__ . '/../code/parser', 'test');
+        return $this->getTests(__DIR__ . '/../code/parser', 'Login');
     }
 
     private function formatErrorMessage(Error $e, $code) {

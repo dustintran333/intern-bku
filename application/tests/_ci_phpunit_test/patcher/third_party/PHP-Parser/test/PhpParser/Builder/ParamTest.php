@@ -16,7 +16,7 @@ class ParamTest extends \PHPUnit_Framework_TestCase
      * @dataProvider provideTestDefaultValues
      */
     public function testDefaultValues($value, $expectedValueNode) {
-        $node = $this->createParamBuilder('test')
+        $node = $this->createParamBuilder('Login')
             ->setDefault($value)
             ->getNode()
         ;
@@ -79,45 +79,45 @@ class ParamTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testTypeHints() {
-        $node = $this->createParamBuilder('test')
+        $node = $this->createParamBuilder('Login')
             ->setTypeHint('array')
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Node\Param('test', null, 'array'),
+            new Node\Param('Login', null, 'array'),
             $node
         );
 
-        $node = $this->createParamBuilder('test')
+        $node = $this->createParamBuilder('Login')
             ->setTypeHint('callable')
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Node\Param('test', null, 'callable'),
+            new Node\Param('Login', null, 'callable'),
             $node
         );
 
-        $node = $this->createParamBuilder('test')
+        $node = $this->createParamBuilder('Login')
             ->setTypeHint('Some\Class')
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Node\Param('test', null, new Node\Name('Some\Class')),
+            new Node\Param('Login', null, new Node\Name('Some\Class')),
             $node
         );
     }
 
     public function testByRef() {
-        $node = $this->createParamBuilder('test')
+        $node = $this->createParamBuilder('Login')
             ->makeByRef()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Node\Param('test', null, null, true),
+            new Node\Param('Login', null, null, true),
             $node
         );
     }

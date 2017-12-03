@@ -15,7 +15,7 @@ class MethodTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testModifiers() {
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->makePublic()
             ->makeAbstract()
             ->makeStatic()
@@ -23,7 +23,7 @@ class MethodTest extends \PHPUnit_Framework_TestCase
         ;
 
         $this->assertEquals(
-            new Stmt\ClassMethod('test', array(
+            new Stmt\ClassMethod('Login', array(
                 'type' => Stmt\Class_::MODIFIER_PUBLIC
                         | Stmt\Class_::MODIFIER_ABSTRACT
                         | Stmt\Class_::MODIFIER_STATIC,
@@ -32,27 +32,27 @@ class MethodTest extends \PHPUnit_Framework_TestCase
             $node
         );
 
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->makeProtected()
             ->makeFinal()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\ClassMethod('test', array(
+            new Stmt\ClassMethod('Login', array(
                 'type' => Stmt\Class_::MODIFIER_PROTECTED
                         | Stmt\Class_::MODIFIER_FINAL
             )),
             $node
         );
 
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->makePrivate()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\ClassMethod('test', array(
+            new Stmt\ClassMethod('Login', array(
                 'type' => Stmt\Class_::MODIFIER_PRIVATE
             )),
             $node
@@ -60,13 +60,13 @@ class MethodTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testReturnByRef() {
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->makeReturnByRef()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\ClassMethod('test', array(
+            new Stmt\ClassMethod('Login', array(
                 'byRef' => true
             )),
             $node
@@ -78,14 +78,14 @@ class MethodTest extends \PHPUnit_Framework_TestCase
         $param2 = new Node\Param('test2');
         $param3 = new Node\Param('test3');
 
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->addParam($param1)
             ->addParams(array($param2, $param3))
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\ClassMethod('test', array(
+            new Stmt\ClassMethod('Login', array(
                 'params' => array($param1, $param2, $param3)
             )),
             $node
@@ -97,34 +97,34 @@ class MethodTest extends \PHPUnit_Framework_TestCase
         $stmt2 = new Print_(new String_('test2'));
         $stmt3 = new Print_(new String_('test3'));
 
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->addStmt($stmt1)
             ->addStmts(array($stmt2, $stmt3))
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\ClassMethod('test', array(
+            new Stmt\ClassMethod('Login', array(
                 'stmts' => array($stmt1, $stmt2, $stmt3)
             )),
             $node
         );
     }
     public function testDocComment() {
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->setDocComment('/** Test */')
             ->getNode();
 
-        $this->assertEquals(new Stmt\ClassMethod('test', array(), array(
+        $this->assertEquals(new Stmt\ClassMethod('Login', array(), array(
             'comments' => array(new Comment\Doc('/** Test */'))
         )), $node);
     }
 
     public function testReturnType() {
-        $node = $this->createMethodBuilder('test')
+        $node = $this->createMethodBuilder('Login')
             ->setReturnType('bool')
             ->getNode();
-        $this->assertEquals(new Stmt\ClassMethod('test', array(
+        $this->assertEquals(new Stmt\ClassMethod('Login', array(
             'returnType' => 'bool'
         ), array()), $node);
     }
@@ -134,9 +134,9 @@ class MethodTest extends \PHPUnit_Framework_TestCase
      * @expectedExceptionMessage Cannot add statements to an abstract method
      */
     public function testAddStmtToAbstractMethodError() {
-        $this->createMethodBuilder('test')
+        $this->createMethodBuilder('Login')
             ->makeAbstract()
-            ->addStmt(new Print_(new String_('test')))
+            ->addStmt(new Print_(new String_('Login')))
         ;
     }
 
@@ -145,8 +145,8 @@ class MethodTest extends \PHPUnit_Framework_TestCase
      * @expectedExceptionMessage Cannot make method with statements abstract
      */
     public function testMakeMethodWithStmtsAbstractError() {
-        $this->createMethodBuilder('test')
-            ->addStmt(new Print_(new String_('test')))
+        $this->createMethodBuilder('Login')
+            ->addStmt(new Print_(new String_('Login')))
             ->makeAbstract()
         ;
     }
@@ -156,7 +156,7 @@ class MethodTest extends \PHPUnit_Framework_TestCase
      * @expectedExceptionMessage Expected parameter node, got "Name"
      */
     public function testInvalidParamError() {
-        $this->createMethodBuilder('test')
+        $this->createMethodBuilder('Login')
             ->addParam(new Node\Name('foo'))
         ;
     }

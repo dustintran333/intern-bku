@@ -36,13 +36,13 @@ class ClassTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testAbstract() {
-        $node = $this->createClassBuilder('Test')
+        $node = $this->createClassBuilder('Login')
             ->makeAbstract()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\Class_('Test', array(
+            new Stmt\Class_('Login', array(
                 'type' => Stmt\Class_::MODIFIER_ABSTRACT
             )),
             $node
@@ -50,13 +50,13 @@ class ClassTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testFinal() {
-        $node = $this->createClassBuilder('Test')
+        $node = $this->createClassBuilder('Login')
             ->makeFinal()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\Class_('Test', array(
+            new Stmt\Class_('Login', array(
                 'type' => Stmt\Class_::MODIFIER_FINAL
             )),
             $node
@@ -74,7 +74,7 @@ class ClassTest extends \PHPUnit_Framework_TestCase
         ));
         $use = new Stmt\TraitUse(array(new Name('SomeTrait')));
 
-        $node = $this->createClassBuilder('Test')
+        $node = $this->createClassBuilder('Login')
             ->addStmt($method)
             ->addStmt($property)
             ->addStmts(array($const, $use))
@@ -82,7 +82,7 @@ class ClassTest extends \PHPUnit_Framework_TestCase
         ;
 
         $this->assertEquals(
-            new Stmt\Class_('Test', array(
+            new Stmt\Class_('Login', array(
                 'stmts' => array($use, $const, $property, $method)
             )),
             $node
@@ -95,12 +95,12 @@ class ClassTest extends \PHPUnit_Framework_TestCase
  * Test
  */
 DOC;
-        $class = $this->createClassBuilder('Test')
+        $class = $this->createClassBuilder('Login')
             ->setDocComment($docComment)
             ->getNode();
 
         $this->assertEquals(
-            new Stmt\Class_('Test', array(), array(
+            new Stmt\Class_('Login', array(), array(
                 'comments' => array(
                     new Comment\Doc($docComment)
                 )
@@ -108,12 +108,12 @@ DOC;
             $class
         );
 
-        $class = $this->createClassBuilder('Test')
+        $class = $this->createClassBuilder('Login')
             ->setDocComment(new Comment\Doc($docComment))
             ->getNode();
 
         $this->assertEquals(
-            new Stmt\Class_('Test', array(), array(
+            new Stmt\Class_('Login', array(), array(
                 'comments' => array(
                     new Comment\Doc($docComment)
                 )
@@ -127,7 +127,7 @@ DOC;
      * @expectedExceptionMessage Unexpected node of type "Stmt_Echo"
      */
     public function testInvalidStmtError() {
-        $this->createClassBuilder('Test')
+        $this->createClassBuilder('Login')
             ->addStmt(new Stmt\Echo_(array()))
         ;
     }
@@ -137,8 +137,8 @@ DOC;
      * @expectedExceptionMessage Doc comment must be a string or an instance of PhpParser\Comment\Doc
      */
     public function testInvalidDocComment() {
-        $this->createClassBuilder('Test')
-            ->setDocComment(new Comment('Test'));
+        $this->createClassBuilder('Login')
+            ->setDocComment(new Comment('Login'));
     }
 
     /**
@@ -146,7 +146,7 @@ DOC;
      * @expectedExceptionMessage Name cannot be empty
      */
     public function testEmptyName() {
-        $this->createClassBuilder('Test')
+        $this->createClassBuilder('Login')
             ->extend('');
     }
 
@@ -155,7 +155,7 @@ DOC;
      * @expectedExceptionMessage Name must be a string or an instance of PhpParser\Node\Name
      */
     public function testInvalidName() {
-        $this->createClassBuilder('Test')
+        $this->createClassBuilder('Login')
             ->extend(array('Foo'));
     }
 }

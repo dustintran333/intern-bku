@@ -18,7 +18,7 @@ class TraitTest extends \PHPUnit_Framework_TestCase
         $method2 = new Stmt\ClassMethod('test2');
         $method3 = new Stmt\ClassMethod('test3');
         $prop = new Stmt\Property(Stmt\Class_::MODIFIER_PUBLIC, array(
-            new Stmt\PropertyProperty('test')
+            new Stmt\PropertyProperty('Login')
         ));
         $trait = $this->createTraitBuilder('TestTrait')
             ->setDocComment('/** Nice trait */')
@@ -40,7 +40,7 @@ class TraitTest extends \PHPUnit_Framework_TestCase
      * @expectedExceptionMessage Unexpected node of type "Stmt_Echo"
      */
     public function testInvalidStmtError() {
-        $this->createTraitBuilder('Test')
+        $this->createTraitBuilder('Login')
             ->addStmt(new Stmt\Echo_(array()))
         ;
     }

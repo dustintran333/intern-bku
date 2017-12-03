@@ -69,7 +69,7 @@ class PrettyPrinterTest extends CodeTestAbstract
     }
 
     public function provideTestPrettyPrint() {
-        return $this->getTests(__DIR__ . '/../code/prettyPrinter', 'test');
+        return $this->getTests(__DIR__ . '/../code/prettyPrinter', 'Login');
     }
 
     public function provideTestPrettyPrintFile() {

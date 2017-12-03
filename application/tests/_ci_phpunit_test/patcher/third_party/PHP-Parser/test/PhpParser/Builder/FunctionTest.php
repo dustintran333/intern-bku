@@ -15,13 +15,13 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testReturnByRef() {
-        $node = $this->createFunctionBuilder('test')
+        $node = $this->createFunctionBuilder('Login')
             ->makeReturnByRef()
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\Function_('test', array(
+            new Stmt\Function_('Login', array(
                 'byRef' => true
             )),
             $node
@@ -33,14 +33,14 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
         $param2 = new Node\Param('test2');
         $param3 = new Node\Param('test3');
 
-        $node = $this->createFunctionBuilder('test')
+        $node = $this->createFunctionBuilder('Login')
             ->addParam($param1)
             ->addParams(array($param2, $param3))
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\Function_('test', array(
+            new Stmt\Function_('Login', array(
                 'params' => array($param1, $param2, $param3)
             )),
             $node
@@ -52,14 +52,14 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
         $stmt2 = new Print_(new String_('test2'));
         $stmt3 = new Print_(new String_('test3'));
 
-        $node = $this->createFunctionBuilder('test')
+        $node = $this->createFunctionBuilder('Login')
             ->addStmt($stmt1)
             ->addStmts(array($stmt2, $stmt3))
             ->getNode()
         ;
 
         $this->assertEquals(
-            new Stmt\Function_('test', array(
+            new Stmt\Function_('Login', array(
                 'stmts' => array($stmt1, $stmt2, $stmt3)
             )),
             $node
@@ -67,21 +67,21 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testDocComment() {
-        $node = $this->createFunctionBuilder('test')
+        $node = $this->createFunctionBuilder('Login')
             ->setDocComment('/** Test */')
             ->getNode();
 
-        $this->assertEquals(new Stmt\Function_('test', array(), array(
+        $this->assertEquals(new Stmt\Function_('Login', array(), array(
             'comments' => array(new Comment\Doc('/** Test */'))
         )), $node);
     }
 
     public function testReturnType() {
-        $node = $this->createFunctionBuilder('test')
+        $node = $this->createFunctionBuilder('Login')
             ->setReturnType('bool')
             ->getNode();
 
-        $this->assertEquals(new Stmt\Function_('test', array(
+        $this->assertEquals(new Stmt\Function_('Login', array(
             'returnType' => 'bool'
         ), array()), $node);
     }
@@ -91,7 +91,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
      * @expectedExceptionMessage Expected parameter node, got "Name"
      */
     public function testInvalidParamError() {
-        $this->createFunctionBuilder('test')
+        $this->createFunctionBuilder('Login')
             ->addParam(new Node\Name('foo'))
         ;
     }

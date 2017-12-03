@@ -29,7 +29,7 @@ class UseTest extends \PHPUnit_Framework_TestCase
 
     public function testNonExistingMethod() {
         $this->setExpectedException('LogicException', 'Method "foo" does not exist');
-        $builder = $this->createUseBuilder('Test');
+        $builder = $this->createUseBuilder('Login');
         $builder->foo();
     }
 }

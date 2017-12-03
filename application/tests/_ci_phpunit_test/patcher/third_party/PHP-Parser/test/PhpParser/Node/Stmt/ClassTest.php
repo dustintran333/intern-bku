@@ -42,7 +42,7 @@ class ClassTest extends \PHPUnit_Framework_TestCase
 
     public function testGetMethod() {
         $methodConstruct = new ClassMethod('__CONSTRUCT');
-        $methodTest = new ClassMethod('test');
+        $methodTest = new ClassMethod('Login');
         $class = new Class_('Foo', array(
             'stmts' => array(
                 new ClassConst(array()),
@@ -53,7 +53,7 @@ class ClassTest extends \PHPUnit_Framework_TestCase
         ));
 
         $this->assertSame($methodConstruct, $class->getMethod('__construct'));
-        $this->assertSame($methodTest, $class->getMethod('test'));
+        $this->assertSame($methodTest, $class->getMethod('Login'));
         $this->assertNull($class->getMethod('nonExisting'));
     }
 }
