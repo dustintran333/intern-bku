@@ -6,7 +6,7 @@
   	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
   	<title>BK Intern management system - Home</title>
-  	<?php include 'reference.php' ?>
+  	<?php include 'referrence.php' ?>
 </head>
 
 <body class="own-style own-margin">

@@ -122,112 +122,113 @@
 }
 /* line 127, ../scss/themes/_own-style.scss */
 .own-style .form-modified {
+  overflow: hidden;
   background-color: #131720;
   margin: 0 auto;
   max-width: 400px;
   padding: 50px 40px;
 }
-/* line 134, ../scss/themes/_own-style.scss */
+/* line 135, ../scss/themes/_own-style.scss */
 .own-style .input-sm {
   background-color: transparent;
   border-color: #282D36;
 }
-/* line 139, ../scss/themes/_own-style.scss */
+/* line 140, ../scss/themes/_own-style.scss */
 .own-style .btn-primary {
   background-color: #F8AD1A;
 }
-/* line 143, ../scss/themes/_own-style.scss */
+/* line 144, ../scss/themes/_own-style.scss */
 .own-style .btn-secondary {
   background-color: #07569a;
   color: white;
 }
-/* line 148, ../scss/themes/_own-style.scss */
+/* line 149, ../scss/themes/_own-style.scss */
 .own-style .color-white {
   color: white;
 }
-/* line 149, ../scss/themes/_own-style.scss */
+/* line 150, ../scss/themes/_own-style.scss */
 .own-style .color-black {
   color: #575757;
 }
-/* line 150, ../scss/themes/_own-style.scss */
+/* line 151, ../scss/themes/_own-style.scss */
 .own-style .color-gray {
   color: #777;
 }
-/* line 151, ../scss/themes/_own-style.scss */
+/* line 152, ../scss/themes/_own-style.scss */
 .own-style .color-light-gray {
   color: #e7e7e7;
 }
-/* line 152, ../scss/themes/_own-style.scss */
+/* line 153, ../scss/themes/_own-style.scss */
 .own-style .color-cyan {
   color: #34d2ff;
 }
-/* line 153, ../scss/themes/_own-style.scss */
+/* line 154, ../scss/themes/_own-style.scss */
 .own-style .color-primary {
   color: #F8AD1A;
 }
-/* line 155, ../scss/themes/_own-style.scss */
+/* line 156, ../scss/themes/_own-style.scss */
 .own-style .font-w-300 {
   font-weight: 300;
 }
-/* line 156, ../scss/themes/_own-style.scss */
+/* line 157, ../scss/themes/_own-style.scss */
 .own-style .font-w-400 {
   font-weight: 400;
 }
-/* line 157, ../scss/themes/_own-style.scss */
+/* line 158, ../scss/themes/_own-style.scss */
 .own-style .font-w-500 {
   font-weight: 500;
 }
-/* line 158, ../scss/themes/_own-style.scss */
+/* line 159, ../scss/themes/_own-style.scss */
 .own-style .font-w-600 {
   font-weight: 600;
 }
-/* line 159, ../scss/themes/_own-style.scss */
+/* line 160, ../scss/themes/_own-style.scss */
 .own-style .font-w-700 {
   font-weight: 700;
 }
-/* line 162, ../scss/themes/_own-style.scss */
+/* line 163, ../scss/themes/_own-style.scss */
 .own-style ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
   color: #777;
 }
-/* line 165, ../scss/themes/_own-style.scss */
+/* line 166, ../scss/themes/_own-style.scss */
 .own-style :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
   color: #777;
   opacity: 1;
 }
-/* line 169, ../scss/themes/_own-style.scss */
+/* line 170, ../scss/themes/_own-style.scss */
 .own-style ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #777;
   opacity: 1;
 }
-/* line 173, ../scss/themes/_own-style.scss */
+/* line 174, ../scss/themes/_own-style.scss */
 .own-style :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #777;
 }
-/* line 176, ../scss/themes/_own-style.scss */
+/* line 177, ../scss/themes/_own-style.scss */
 .own-style ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #777;
 }
-/* line 188, ../scss/themes/_own-style.scss */
+/* line 189, ../scss/themes/_own-style.scss */
 .own-style button:hover {
   opacity: 0.8;
 }
-/* line 193, ../scss/themes/_own-style.scss */
+/* line 194, ../scss/themes/_own-style.scss */
 .own-style span.psw {
   float: right;
   padding-top: 16px;
 }
-/* line 199, ../scss/themes/_own-style.scss */
+/* line 200, ../scss/themes/_own-style.scss */
 .own-style .modal {
   display: none;
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 3;
   /* Sit on top */
   left: 0;
   top: 0;
@@ -243,7 +244,7 @@
   /* Black w/ opacity */
   padding-top: 60px;
 }
-/* line 214, ../scss/themes/_own-style.scss */
+/* line 215, ../scss/themes/_own-style.scss */
 .own-style .modal-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto;
@@ -252,7 +253,7 @@
   width: 80%;
   /* Could be more or less, depending on screen size */
 }
-/* line 222, ../scss/themes/_own-style.scss */
+/* line 223, ../scss/themes/_own-style.scss */
 .own-style .close {
   position: absolute;
   right: 25px;
@@ -261,13 +262,13 @@
   font-size: 35px;
   font-weight: bold;
 }
-/* line 231, ../scss/themes/_own-style.scss */
+/* line 232, ../scss/themes/_own-style.scss */
 .own-style .close:hover,
 .own-style .close:focus {
   color: red;
   cursor: pointer;
 }
-/* line 238, ../scss/themes/_own-style.scss */
+/* line 239, ../scss/themes/_own-style.scss */
 .own-style .animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s;
@@ -289,12 +290,12 @@
   }
 }
 @media screen and (max-width: 300px) {
-  /* line 255, ../scss/themes/_own-style.scss */
+  /* line 256, ../scss/themes/_own-style.scss */
   .own-style span.psw {
     display: block;
     float: none;
   }
-  /* line 259, ../scss/themes/_own-style.scss */
+  /* line 260, ../scss/themes/_own-style.scss */
   .own-style .cancelbtn {
     width: 100%;
   }

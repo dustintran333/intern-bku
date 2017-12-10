@@ -153,3 +153,13 @@ $(function(){
         });        
     }
 });
+
+$(document).ready(function(){
+    $("#addStudent").click(function(){
+        $("#addStudentPopup").modal();
+    });
+
+    $("#addCompany").click(function(){
+        $("#addCompanyPopup").modal();
+    });
+});

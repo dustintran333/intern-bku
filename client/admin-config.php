@@ -45,7 +45,7 @@
 		<ul class="nav nav-tabs nav-tabs-horizontal panel-heading text-center" id="nav-tabs-wrapper">
 			<li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên</a></li>
 			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách doanh nghiệp </a></li>			
-			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Thêm người dùng</a></li>
+			<!--<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Thêm người dùng</a></li>-->
 			<li><a href="#tab-4" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa sinh viên</a></li>
 			<li><a href="#tab-5" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
 			<li><a href="#tab-6" role="tab" data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i> Chi tiết sinh viên</a></li>
@@ -65,13 +65,13 @@
 								</div>
 							</div>
 						</form>
-					</div>
-					
+					</div>					
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table id="" class="table table-striped table-hover table-condensed">
+							<table id="" class="table table-fixed table-striped table-hover table-condensed">
 								<thead>
 									<tr class="bg-primary">
 										<th>Số thứ tự</th>
@@ -102,14 +102,78 @@
 										<td>FPT</td>
 										<td>2</td>										
 									</tr>
-								</tbody>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>28/05/2018</td>
+										<td>Disable</td>
+										<td>FPT</td>
+										<td>2</td>										
+									</tr>
+
+								</tbody>								
 							</table>
 						</div>
 					</div>
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class=""><button class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
+					<p class=""><button type="button" id="addStudent" class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
 				</div>
 			</div>
 			<!--------------End danh sach sinh vien------------>
@@ -126,9 +190,9 @@
 								</div>
 							</div>
 						</form>
-					</div>
-					
+					</div>					
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-responsive">
@@ -164,7 +228,7 @@
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class=""><button class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
+					<p class=""><button type="button" id="addCompany" class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
 				</div>
 			</div>
 			<!--------------End_danh sach doanh nghiep------------>
@@ -407,6 +471,92 @@
 	  		</div>				  		  			  	
 		</form>
 	</div>
+
+	<!-- Modal -->
+	<!--<div class="modal fade" id="addStudentPopup" role="dialog">
+	    <div class="modal-dialog">	      
+	      <div class="modal-content">
+	        <div class="">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          		
+	        </div>
+	        <div class="modal-body">
+	        	<h3>Registration</h3>		
+	          	<form action="API.php" id="createAccount" method="post">
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
+						<input id="username" class="form-control" type="text" style=""/>
+					</div>				
+					
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 90px;"><span>Loại User</span></div>
+						<select name="type" id="userType" style="border-radius: 0 5px 5px 0; height: 35px;">
+							<option value="student">Sinh viên</option>
+							<option value="company">Doanh nghiệp</option>	
+						</select>
+					</div>
+
+					<div class="form-group">
+						<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+						<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+					</div>
+
+					<div class="form-group col-md-12">
+						<p class="text-center"><button id="create" type="submit" class="btn btn-secondary radius-5"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button></p>
+					</div>
+				</form>				
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        </div>
+	      </div>
+
+	    </div>
+	</div>-->
+
+	<div id="addStudentPopup" class="modal">			
+      	<form class="radius-5 form-modified animate" action="API.php" id="createAccount" method="post">
+      		<h3 class="text-center">Thêm sinh viên mới</h3>	
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
+				<input id="username" class="form-control" type="text" style=""/>
+			</div>
+
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Họ Tên</span></div>
+				<input id="username" class="form-control" type="text" style=""/>
+			</div>		
+						
+			<div class="form-group">
+				<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+				<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+			</div>
+
+			<div class="form-group col-md-12 text-center">				
+				<button type="submit" class="btn btn-sm btn-secondary radius-5" style="width:40%;max-width:200px;"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button>
+			</div>
+		</form>		
+	</div>
+
+	<div id="addCompanyPopup" class="modal">			
+      	<form class="radius-5 form-modified animate" action="API.php" id="createAccount" method="post">
+      		<h3 class="text-center">Thêm doanh nghiệp mới</h3>	
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Tên Doanh nghiệp</span></div>
+				<input id="username" class="form-control" type="text" style=""/>
+			</div>				
+						
+			<div class="form-group">
+				<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+				<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+			</div>
+
+			<div class="form-group col-md-12 text-center">				
+				<button type="submit" class="btn btn-sm btn-secondary radius-5" style="width:40%;max-width:200px;"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button>
+			</div>
+		</form>		
+	</div>
+
 	<?php include 'footer.php' ?>	
 	<?php include 'scripts.php' ?>
 	<script>

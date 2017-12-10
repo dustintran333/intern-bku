@@ -24,7 +24,7 @@
 	  align-self: center;
 	}
 
-
+	
 	td > select {
 		height: 25px;
 	}
@@ -125,6 +125,7 @@
 	}
 
   .form-modified {
+  	overflow: hidden;
     background-color:#131720;
     margin: 0 auto;
     max-width:400px;
@@ -199,7 +200,7 @@
 	.modal {
 	    display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
-	    z-index: 1; /* Sit on top */
+	    z-index: 3; /* Sit on top */
 	    left: 0;
 	    top: 0;
 	    width: 100%; /* Full width */
