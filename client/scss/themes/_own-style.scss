@@ -35,7 +35,13 @@
 	}
 
 	.main-background {
-		//background-image: ;
+		background-image: url("../images/sl1-min.jpg");
+		background-attachment: fixed;
+    	background-position: center;
+    	background-size: cover;
+    	height: 400px;
+    	width: auto;
+    	background-repeat: no-repeat;
 	}
 
 	.container {

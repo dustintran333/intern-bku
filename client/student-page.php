@@ -35,7 +35,7 @@
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>MSSV</span></div>
-					<input name="ma_so_sv" class="form-control" type="text" style="" placeholder="" disabled>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="" disabled>
 				</div>
 
 				<div class="form-group">Ngày sinh<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
@@ -49,7 +49,7 @@
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class="text-center"><button class="btn btn-primary radius-5">Lưu</button></p>
+					<p class="text-center"><button type="submit" class="btn btn-primary radius-5">Lưu</button></p>
 				</div>
 			</div>
 			<!--------------End sửa sinh vien------------>	

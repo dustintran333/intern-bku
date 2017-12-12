@@ -14,7 +14,8 @@
 
 	<section class="">
 		<div class="container-fluid main-background" style="padding: 0px 0px 30px 0px;">
-			<img class="" srcset="http://via.placeholder.com/1500x500">
+			<!--<img class="" srcset="http://via.placeholder.com/1500x500">-->
+			
 		</div>
 
 		<div class="container">
@@ -129,9 +130,9 @@
 				<p class="text-center color-gray fs-17 line-h ">Log in to BK intern management system</p>			
 			</div>
 		  	
-		  	<p class="m-0"><input class="input input-sm w-full radius-5 color-white mb-20" placeholder="Username" type="text" required></p>
+		  	<p class="m-0"><input name="username" class="input input-sm w-full radius-5 color-white mb-20" placeholder="Username" type="text" required></p>
 		  	
-			<p class="m-0"><input class="input input-sm w-full radius-5 color-white	mb-20" placeholder="Password" type="password" required></p>
+			<p class="m-0"><input name="password" class="input input-sm w-full radius-5 color-white	mb-20" placeholder="Password" type="password" required></p>
 
 			<div class="mb-20">
 				<label class="checkbox">

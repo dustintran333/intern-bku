@@ -121,7 +121,7 @@
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class=""><button class="btn btn-primary radius-5" style="float: left">Lưu</button><span><button class="btn btn-secondary radius-5" style="float: right"> Phản hồi về trường</button></span></p>
+					<p class=""><button type="submit" class="btn btn-primary radius-5" style="float: left">Lưu</button><span><button class="btn btn-secondary radius-5" style="float: right"> Phản hồi về trường</button></span></p>
 				</div>
 			</div>
 			<!--------------End danh sách sinh viên------------>			
