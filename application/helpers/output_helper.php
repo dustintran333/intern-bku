@@ -1,19 +1,9 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Phuc
- * Date: 28/11/2017
- * Time: 11:08 PM
+ * Print 401 Not Logged In
  */
-function loginProtect()
-{
-	$ci =& get_instance();
-	$ci->load->model('auth');
-	if (!$ci->auth->checkLogin()){
-		output401();
-	}
-}
 function output401(){
+
 	$ci =& get_instance();
 	$ci->output
 		->set_status_header(401)
@@ -22,7 +12,12 @@ function output401(){
 		->_display();
 	die;
 }
+
+/**
+ * Print 403 no permission
+ */
 function output403(){
+
 	$ci =& get_instance();
 	$ci->output
 		->set_status_header(403)
@@ -31,7 +26,12 @@ function output403(){
 		->_display();
 	die;
 }
+
+/**
+ * Make full output JSON for a given $data
+ */
 function makeOutput($data = ['msg' => 'Success', 'code' => 1]){
+
 	$ci =& get_instance();
 	$ci->output
 		->set_status_header(200)
@@ -40,12 +40,5 @@ function makeOutput($data = ['msg' => 'Success', 'code' => 1]){
 		->_display();
 	die;
 }
-function handleLogin($res){
-	switch ($res){
-		case LOGIN_NO_USERNAME: makeOutput(["msg" => "No Username Found", "code" => $res]);break;
-		case LOGIN_SUCCESS: makeOutput(["msg" => "Login Successful", "code" => $res]);break;
-		case LOGIN_WRONG_PASSWORD: makeOutput(["msg" => "Wrong Password", "code" => $res]);break;
-		case LOGIN_ALREADY_LOGGED_IN: makeOutput(["msg" => "You Are Already Logged In", "code" => $res]);break;
-	}
-}
+
 ?>

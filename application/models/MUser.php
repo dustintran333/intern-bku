@@ -2,41 +2,36 @@
 class MUser extends CI_Model
 {
 	var $table = 'user';
+
 	public function __construct()
 	{
 		$this->load->database();
 	}
+
 	public function get($id = FALSE)
 	{
 		if ($id === FALSE) {
 			$query = $this->db->get($this->table);
-			return $query->result_array();
+			return $query->result_array(); //multiple results
 		}
 		$query = $this->db->get_where($this->table, ['ma_so' => $id]);
-		return $query->row_array();
+		return $query->row_array(); //single result
 	}
-	public function update($id,$data){
+
+	public function update($id,$data)
+	{
 		$where = [ "ma_so" => $id ];
+		var_dump($data);
 		$this->db->update($this->table,$data,$where);
 	}
-	public function add($data){
+	public function add($data)
+	{
 		$this->db->insert($this->table,$data);
 	}
-	public function delete($id){
-		$where=["ma_so" => $id];
+
+	public function delete($id)
+	{
+		$where = ["ma_so" => $id];
 		$this->db->delete($this->table,$where);
-	}
-	public function login($username,$password){
-		$query = $this->db->get_where($this->table, [
-			'username' => $username,
-			'password' => md5($password)
-		]);
-		return $query->row_array();
-	}
-	public function checkExist($username){
-		$query = $this->db->get_where($this->table, [
-			'username' => $username,
-		]);
-		return ($query->row_array() == NULL? false:true);
 	}
 }

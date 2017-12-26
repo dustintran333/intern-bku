@@ -1,5 +1,5 @@
 <?php
-class Permission extends CI_Model
+class MPermission extends CI_Model
 {
 	var $table = 'permission';
 	public function __construct()

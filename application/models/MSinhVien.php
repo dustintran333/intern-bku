@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Phuc
- * Date: 21/10/2017
- * Time: 12:46 AM
- */
 class MSinhVien extends CI_Model
 {
 	var $table = 'sinh_vien';
@@ -33,8 +27,15 @@ class MSinhVien extends CI_Model
 	}
 	public function update($id,$data)
 	{
+		var_dump($data);
 		$where = [ "ma_so" => $id ];
 		$this->db->update($this->table,$data,$where);
+		/*
+		$db = &$this->db;
+		$db->set($data);
+		$db->where($where);
+		$db->update($this->table,$data);
+		*/
 	}
 	public function add($data)
 	{
