@@ -1,14 +1,17 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Admin config</title>
+  	<?php include 'referrence.php' ?>
+</head>
+
 
 <body class="own-style own-margin">
-	<header id="header" class="container-fluid">
-		<div class="login-bar">
-			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
-
-			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log out</button>
-		</div>
-	</header>
-
+	<?php include 'header.php' ?>
 	
 	<!-------Popover button template------>
 	<div style="display: none" id="btnMenu">
@@ -16,18 +19,18 @@
 			<button id="" type="button" class="btn btn-sm btnView btn-success1">Xem</button>
 			<button id="" type="button" class="btn btn-sm btnEdit btn-primary1">Sửa</button>
 			<button id="delete" type="button" class="btn btn-sm btnDelete btn-danger1">Xoá</button>
-			<button id="delete" type="button" class="btn btn-sm btnDeleteAll btn-danger1">Xoá hết</button>
+			<button id="deleteAll" type="button" class="btn btn-sm btnDeleteAll btn-danger1">Xoá hết</button>
 		</div>
 	</div>
 	<!-------End popover button template------->
 
 	<!-------Popover button template------>
 	<div style="display: none" id="btnMenu2">
-		<div class="btn-group btn-group-xs" role="group" >
+		<div class="btn-group btn-group-xs" role="group" >			
 			<button id="" type="button" class="btn btn-sm btnView2 btn-success1">Xem</button>
 			<button id="" type="button" class="btn btn-sm btnEdit2 btn-primary1">Sửa</button>
-			<button id="delete" type="button" class="btn btn-sm btnDelete2 btn-danger1">Xoá</button>
-			<button id="delete" type="button" class="btn btn-sm btnDeleteAll2 btn-danger1">Xoá hết</button>
+			<button id="delete2" type="button" class="btn btn-sm btnDelete2 btn-danger1">Xoá</button>
+			<button id="deleteAll2" type="button" class="btn btn-sm btnDeleteAll2 btn-danger1">Xoá hết</button>
 		</div>
 	</div>
 	<!-------End popover button template------>
@@ -41,9 +44,9 @@
 		<ul class="nav nav-tabs nav-tabs-horizontal panel-heading text-center" id="nav-tabs-wrapper">
 			<li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên</a></li>
 			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách doanh nghiệp </a></li>			
-			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Thêm người dùng</a></li>
+			<!--<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-plus" aria-hidden="true"></i> Thêm người dùng</a></li>-->
 			<li><a href="#tab-4" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa sinh viên</a></li>
-			<li><a href="#tab-5" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
+			<!--<li><a href="#tab-5" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>-->
 			<li><a href="#tab-6" role="tab" data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i> Chi tiết sinh viên</a></li>
 			<li><a href="#tab-7" role="tab" data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i> Chi tiết doanh nghiệp</a></li>
 		</ul>
@@ -55,19 +58,19 @@
 						<form action="app/apiBenhNhan.php?mode=search" id="frmTimBenhNhan" method="post">
 							<div class="input-group input-group form-group">
 								<div class="input-group-addon"><span>User</span></div>
-								<input class="form-control" type="text" name="txtHoten">
+								<input class="form-control" type="text" name="ho_ten">
 								<div class="input-group-btn">
 									<button class="btn btn-xs btn-info btn-find" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
 								</div>
 							</div>
 						</form>
-					</div>
-					
+					</div>					
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-responsive">
-							<table id="" class="table table-striped table-hover table-condensed">
+							<table id="" class="table table-fixed table-striped table-hover table-condensed">
 								<thead>
 									<tr class="bg-primary">
 										<th>Số thứ tự</th>
@@ -98,10 +101,17 @@
 										<td>FPT</td>
 										<td>2</td>										
 									</tr>
-								</tbody>
+									
+									
+
+								</tbody>								
 							</table>
 						</div>
 					</div>
+				</div>
+
+				<div class="form-group col-md-12">
+					<p class=""><button type="button" id="addStudent" class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
 				</div>
 			</div>
 			<!--------------End danh sach sinh vien------------>
@@ -112,23 +122,22 @@
 						<form action="/" id="frmTimBenhNhan" method="post">
 							<div class="input-group input-group form-group">
 								<div class="input-group-addon"><span>User</span></div>
-								<input class="form-control" type="text" name="txtHoten">
+								<input class="form-control" type="text" name="ten_dn">
 								<div class="input-group-btn">
 									<button class="btn btn-xs btn-info btn-find" type="submit" id="btnTim"><strong>Tìm</strong><br></button>
 								</div>
 							</div>
 						</form>
-					</div>
-					
+					</div>					
 				</div>
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="table-responsive">
 							<table id="" class="table table-striped table-hover table-condensed">
 								<thead>
 									<tr class="bg-primary">
-										<th>Số thứ tự</th>
-										<th>Username</th>
+										<th>Số thứ tự</th>										
 										<th>Doanh nghiệp</th>
 										<th>Enable/Disable</th>										
 										<th>Số lượng SV tối đa</th>
@@ -137,18 +146,26 @@
 								</thead>
 								<tbody id="tableDN">
 									<tr data-toggle="popover2">
-										<td>001</td>
-										<td>vng001</td>
+										<td>001</td>										
 										<td>VNG</td>
-										<td>Enable</td>
+										<td>
+											<select name="disable">
+													<option value="enable">Enable</option>
+													<option value="disable">Disable</option>
+											</select>											
+										</td>
 										<td>43</td>
 										<td>10</td>
 									</tr>
 									<tr data-toggle="popover2">
-										<td>002</td>
-										<td>fpt001</td>
+										<td>002</td>									
 										<td>FPT</td>
-										<td>Enable</td>
+										<td>
+											<select name="disable">
+													<option value="enable">Enable</option>
+													<option value="disable">Disable</option>
+											</select>											
+										</td>
 										<td>20</td>
 										<td>19</td>
 									</tr>
@@ -157,10 +174,14 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="form-group col-md-12">
+					<p class=""><button type="button" id="addCompany" class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Lọc</button></span></p>
+				</div>
 			</div>
 			<!--------------End_danh sach doanh nghiep------------>
 			<!--------------Them User------------>
-			<div class="tab-pane" role="tabpanel" id="tab-3" style="margin: 0 auto; max-width: 600px">
+			<!--<div class="tab-pane" role="tabpanel" id="tab-3" style="margin: 0 auto; max-width: 600px">
 				
 				<h3>Registration</h3>
 
@@ -179,8 +200,8 @@
 					</div>
 
 					<div class="form-group">
-						<input class="" type="radio" name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
-						<input class="" type="radio" name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+						<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+						<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
 					</div>
 
 					<div class="form-group col-md-12">
@@ -194,70 +215,72 @@
 			<div class="tab-pane" role="tabpanel" id="tab-4" style="margin: 0 auto; max-width: 600px">
 				<h3>Hiệu chỉnh sinh viên</h3>
 
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
-					<input name="user_sv" class="form-control" type="text" style="" placeholder="" disabled>
-				</div>				
-											
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
-					<input name="ho_ten" class="form-control" id="" value="" type="text">
-				</div>
+				<form id="editStudentForm" class="" method="put" action="">
+					<input name="ma_so" class="" type="text" style="" placeholder="" hidden>
 
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 120px;"><span>Số lượng DN tối đa</span></div>
-					<input name="sl_dn_doi_da" class="form-control" type="number" style="" min="0" max="100" required value="0" >
-				</div>	
-				
-				<div class="form-group">
-					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
-					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
-				</div>
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 90px;"><span>User</span></div>
+						<input name="ma_so_sv" class="form-control" type="text" style="" placeholder="" disabled>
+					</div>				
+												
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 90px;"><span>Họ tên</span></div>
+						<input name="ho_ten" class="form-control" id="" value="" type="text">
+					</div>
 
-				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline_ung_tuyen" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 120px;"><span>Số lượng DN tối đa</span></div>
+						<input name="sl_dn_doi_da" class="form-control" type="number" style="" min="0" max="100" required value="0" >
+					</div>	
+					
+					<div class="form-group">
+						<input class="" type="radio"  name="disable" value="enable"><span style="padding-left: 10px">Enable</span>
+						<input class="" type="radio"  name="disable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+					</div>
 
-				<div class="form-group">Deadline SV chọn doanh nghiệp <input type="date" name="deadline_chon_dn" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+					<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline_ung_tuyen" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
 
-				<div class="form-group col-md-12">
-					<p class="text-center"><button class="btn btn-primary radius-5">Lưu</button></p>
-				</div>
+					<div class="form-group">Deadline SV chọn doanh nghiệp <input type="date" name="deadline_chon_dn" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
+
+					<div class="form-group col-md-12">
+						<p class="text-center"><button type="submit" class="btn btn-primary radius-5">Lưu</button></p>
+					</div>
+				</form>
 			</div>
 			<!--------------End sửa student------------>
 			<!--------------Sửa doanh nghiệp------------>
-			<div class="tab-pane" role="tabpanel" id="tab-5" style="margin: 0 auto; max-width: 600px">
+			<!--<div class="tab-pane" role="tabpanel" id="tab-5" style="margin: 0 auto; max-width: 600px">
 				<h3>Hiệu chỉnh doanh nghiệp</h3>
+				<form id="editCompanyForm" class="" method="put" action="">			
+					<input name="ma_so" class="" type="text" style="" placeholder="" hidden>
 
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 120px;"><span>User</span></div>
-					<input name="user_dn" class="form-control" type="text" style="" placeholder="" disabled>
-				</div>				
-											
-				<div class="form-group input-group col-md-12">
-					<div class="input-group-addon" style="width: 120px;"><span>Doanh nghiệp</span></div>
-					<input name="ten_dn" class="form-control" id="" value="" type="text">
-				</div>
+					<div class="form-group input-group col-md-12">
+						<div class="input-group-addon" style="width: 120px;"><span>Doanh nghiệp</span></div>
+						<input name="ten_dn" class="form-control" id="" value="" type="text" disabled>
+					</div>
 
-				<div class="form-group">
-					<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
-					<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
-				</div>
+					<div class="form-group">
+						<input class="" type="radio"  name="enable" value="enable"><span style="padding-left: 10px">Enable</span>
+						<input class="" type="radio"  name="enable" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+					</div>
 
-				<p>(*)Chọn hình ảnh logo</p>
-				<p><input type="file" name="logo" accept="image/*" style="display: inline-block"></span></p>
+					<p>(*)Chọn hình ảnh logo</p>
+					<p><input type="file" name="logo" accept="image/*" style="display: inline-block"></span></p>
 
-				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
-				</div>
+					<div class="form-group input-group col-md-12">					
+						<textarea rows="6" name="editor1" class="form-control" id="" style="border-radius:5px;">Giới thiệu doanh nghiệp</textarea>  
+					</div>
 
-				<div class="form-group input-group col-md-12">					
-					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
-				</div>
+					<div class="form-group input-group col-md-12">					
+						<textarea rows="6" name="editor2" class="form-control" id="" style="border-radius:5px;">Thông tin liên lạc</textarea>  
+					</div>
 
-				<div class="form-group col-md-12">
-					<p class="text-center"><button class="btn btn-primary radius-5">Save</button></p>
-				</div>
-			</div>
-			<!--------------End sửa student------------>
+					<div class="form-group col-md-12">
+						<p class="text-center"><button type="submit" class="btn btn-primary radius-5">Save</button></p>
+					</div>
+				</form>
+			</div> -->
+			<!--------------End sửa doanh nghiep------------>
 			<!--------------Chi tiet sinh vien-------------->
 			<div class="tab-pane" role="tabpanel" id="tab-6">
 				<div class="infoDiv" style="background: #dedede;">
@@ -357,11 +380,141 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h4>Danh sách Admin doanh nghiệp</h4>
+						<select size="5" name="admin-list" style="border-radius: 5PX; height: 100px;">
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>
+							<option value="fpt001">fpt001</option>
+							<option value="fpt002">fpt002</option>
+							<option value="fpt003">fpt003</option>							
+						</select>
+					</div>
+				</div>
+				<div class="row mt-30">
+					<div class="form-group col-md-12">
+						<p class=""><button type="button" id="addCompanyAdmin" class="btn btn-primary radius-5" style="float: left">Thêm</button><span><button class="btn btn-secondary radius-5" style="float: right">Sửa</button></span></p>
+					</div>
+				</p>
 			</div>
 			<!--------------End chi tiet doanh nghiep------------>						
 		</div>
 	</div>
-	<!--------------EndHorizontalTabPanel-------------->	
+	<!--------------EndHorizontalTabPanel-------------->
+	
+	<!-- xoá alert popup -->
+	<div id="confirm-alert" class="modal">  
+	  	<form class="radius-5 form-modified animate" action="/action_page.php">
+	  		<p class="text-center mt-20">Bạn muốn xoá hết dữ liệu</p>
+	  		<div class="row mt-30">
+	  			<div class="col-xs-6">
+	  				<button type="submit" class="btn btn-sm btn-primary radius-5" style="">Confirm</button>
+	  			</div>
+
+	  			<div class="col-xs-6">
+	  				<button type="" class="btn btn-sm btn-primary radius-5" style="">Cancel</button>
+	  			</div>
+	  		</div>				  		  			  	
+		</form>
+	</div>
+	<!-- end xoá alert popup -->
+
+	<!-- thêm sv popup -->	
+	<div id="addStudentPopup" class="modal">			
+      	<form class="radius-5 form-modified animate" action="API.php" id="createAccount" method="post">
+      		<h3 class="text-center">Thêm sinh viên mới</h3>	
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Username</span></div>
+				<input id="username" class="form-control" type="text" style="" required>
+			</div>
+
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Password</span></div>
+				<input id="password" class="form-control" type="password" style="" required>
+			</div>		
+
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Họ Tên</span></div>
+				<input id="username" class="form-control" type="text" style="" required>
+			</div>		
+						
+			<div class="form-group">
+				<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+				<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+			</div>
+
+			<div class="form-group col-md-12 text-center">				
+				<button type="submit" class="btn btn-sm btn-secondary radius-5" style="width:40%;max-width:200px;"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button>
+			</div>
+		</form>		
+	</div>
+
+	<!-- thêm DN popup -->
+	<div id="addCompanyPopup" class="modal">			
+      	<form class="radius-5 form-modified animate" action="API.php" id="createAccount" method="post">
+      		<h3 class="text-center">Thêm doanh nghiệp mới</h3>	
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Tên Doanh nghiệp</span></div>
+				<input id="username" class="form-control" type="text" style="" required>
+			</div>				
+						
+			<div class="form-group">
+				<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+				<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+			</div>
+
+			<div class="form-group col-md-12 text-center">				
+				<button type="submit" class="btn btn-sm btn-secondary radius-5" style="width:40%;max-width:200px;"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button>
+			</div>
+		</form>		
+	</div>
+
+	<!-- thêm admin DN popup -->
+	<div id="addCompanyAdminPopup" class="modal">			
+      	<form class="radius-5 form-modified animate" action="API.php" id="createAccount" method="post">
+      		<h3 class="text-center">Thêm quản trị viên doanh nghiệp</h3>	
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Username</span></div>
+				<input id="username" class="form-control" type="text" style="" required>
+			</div>
+
+			<div class="form-group input-group col-md-12">
+				<div class="input-group-addon" style="width: 90px;"><span>Password</span></div>
+				<input id="password" class="form-control" type="password" style="" required>
+			</div>							
+						
+			<div class="form-group">
+				<input class="" type="radio" name="disabled" value="enable"><span style="padding-left: 10px">Enable</span>
+				<input class="" type="radio" name="disabled" value="disable" style="margin-left: 15px"><span style="padding-left: 10px">Disable</span>
+			</div>
+
+			<div class="form-group col-md-12 text-center">				
+				<button type="submit" class="btn btn-sm btn-secondary radius-5" style="width:40%;max-width:200px;"><i class="fa fa-plus" style="margin-right:10px; margin-left: -10px;"></i>Tạo mới</button>
+			</div>
+		</form>		
+	</div>
+
+	<?php include 'footer.php' ?>	
 	<?php include 'scripts.php' ?>
+	<script>
+		CKEDITOR.replace('editor1');
+		CKEDITOR.replace('editor2');
+
+	</script>
 </body>
 </html>

@@ -1,12 +1,16 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Student page</title>
+  	<?php include 'referrence.php' ?>
+</head>
 
 <body class="own-style own-margin">
-	<header id="header" class="container-fluid">
-		<div class="login-bar">
-			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
-			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log in</button>
-		</div>
-	</header>
+	<?php include 'header.php' ?>
 
 	<section>
 		<div class="container">
@@ -81,9 +85,15 @@
 				<h2 class="font-w-300 fs-42 color-white ">Đăng ký</h2>
 				<p class="text-center color-gray fs-17 line-h ">Đăng ký doanh nghiệp</p>			
 			</div>
+			<p>Vị trí ứng tuyển</p>
+			<select class="w-full" style="border-radius: 5px; height: 25px;">
+				<option value="">mobile developer</option>
+				<option value="">web developer</option>
+				<option value="">zalo developer</option>
+			</select>
 
-		  	<p>(*)Tập tin CV gửi kèm</p>
-			<p><input type="file" name="pic" accept="image/*" style="display: inline-block"></p>
+		  	<p class="mt-20">(*)Tập tin CV gửi kèm</p>
+			<p><input type="file"name="pic" accept="image/*" style="display: inline-block"></p>
  			
 			<div class="mt-20">				
 				<p class="text-center"><button type="submit" class="btn btn-sm btn-primary radius-5" style="width:40%;max-width:200px;">Đăng ký</button></p>					
@@ -91,6 +101,8 @@
 		</form>
 	</div>
 
+	<?php include 'footer.php' ?>
+		
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
@@ -106,5 +118,6 @@
 	    }
 	}	
 	</script>
+
 </body>
 </html>

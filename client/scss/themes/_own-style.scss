@@ -24,13 +24,24 @@
 	  align-self: center;
 	}
 
-
+	
 	td > select {
 		height: 25px;
 	}
 
+	.nav-tabs>li {
+	    float: left;
+	    margin-bottom: -12px;
+	}
+
 	.main-background {
-		//background-image: ;
+		background-image: url("../images/sl1-min.jpg");
+		background-attachment: fixed;
+    	background-position: center;
+    	background-size: cover;
+    	height: 400px;
+    	width: auto;
+    	background-repeat: no-repeat;
 	}
 
 	.container {
@@ -120,6 +131,7 @@
 	}
 
   .form-modified {
+  	overflow: hidden;
     background-color:#131720;
     margin: 0 auto;
     max-width:400px;
@@ -194,7 +206,7 @@
 	.modal {
 	    display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
-	    z-index: 1; /* Sit on top */
+	    z-index: 3; /* Sit on top */
 	    left: 0;
 	    top: 0;
 	    width: 100%; /* Full width */

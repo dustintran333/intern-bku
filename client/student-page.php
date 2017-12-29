@@ -1,12 +1,16 @@
-<?php include 'head.php' ?>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  	<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  	<title>BK Intern management system - Student page</title>
+  	<?php include 'referrence.php' ?>
+</head>
 
 <body class="own-style own-margin">
-	<header id="header" class="container-fluid">
-		<div class="login-bar">
-			<a href="index.html"><img width="40" height="40" src="images/logo.png" style="margin:5px 20px"></a>
-			<button onclick="document.getElementById('id01').style.display='block'" class="btn btn-xs btn-info radius-5" style="float:right; margin: 10px 15px; width:auto;display:flex;">Log out</button>
-		</div>
-	</header>
+	<?php include 'header-login-student.php' ?>
 
 	<div class="container-fluid">
 	
@@ -31,21 +35,33 @@
 
 				<div class="form-group input-group col-md-12">
 					<div class="input-group-addon" style="width: 120px;"><span>MSSV</span></div>
-					<input name="ma_so_sv" class="form-control" type="text" style="" placeholder="" disabled>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="" disabled>
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Email</span></div>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="" >
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Số ĐTDĐ</span></div>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="">
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Địa chỉ</span></div>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="">
 				</div>
 
 				<div class="form-group">Ngày sinh<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
-
-				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
-
-				<div class="form-group">Deadline chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>														
+															
 								
 				<div class="form-group input-group col-md-12">					
 					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Ghi chú bản thân</textarea>  
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class="text-center"><button class="btn btn-primary radius-5">Lưu</button></p>
+					<p class="text-center"><button type="submit" class="btn btn-primary radius-5">Lưu</button></p>
 				</div>
 			</div>
 			<!--------------End sửa sinh vien------------>	
@@ -97,36 +113,7 @@
 											<input class="" type="radio"  name="choice" value="enable">
 										</td>																			
 									</tr>
-									<tr data-toggle="popover3">
-										<td>003</td>
-										<td>VNG</td>										
-										<td>29/05/2018</td>
-										<td>12/06/2018</td>
-										<td>Rồi</td>
-										<td>
-											<input class="" type="radio"  name="choice" value="enable">
-										</td>																			
-									</tr>
-									<tr data-toggle="popover3">
-										<td>003</td>
-										<td>VNG</td>										
-										<td>29/05/2018</td>
-										<td>12/06/2018</td>
-										<td>Rồi</td>
-										<td>
-											<input class="" type="radio"  name="choice" value="enable">
-										</td>																			
-									</tr>
-									<tr data-toggle="popover3">
-										<td>003</td>
-										<td>VNG</td>										
-										<td>29/05/2018</td>
-										<td>12/06/2018</td>
-										<td>Rồi</td>
-										<td>
-											<input class="" type="radio"  name="choice" value="enable">
-										</td>																			
-									</tr>
+									
 								</tbody>
 							</table>
 						</div>
@@ -149,7 +136,9 @@
 			<!--------------Kết quả thực tập------------>								
 		</div>
 	</div>
-	<!--------------EndHorizontalTabPanel-------------->	
+	<!--------------EndHorizontalTabPanel-------------->
+	<?php include 'footer.php' ?>		
 	<?php include 'scripts.php' ?>
+	
 </body>
 </html>
