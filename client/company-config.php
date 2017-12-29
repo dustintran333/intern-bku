@@ -19,7 +19,7 @@
 		<ul class="nav nav-tabs nav-tabs-horizontal panel-heading text-center" id="nav-tabs-wrapper">
 			<li class="active"><a href="#tab-1" role="tab" data-toggle="tab"><i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa doanh nghiệp</a></li>
 			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên ứng tuyển</a></li>
-			<li><a href="#tab-2" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên ứng tuyển</a></li>			
+			<li><a href="#tab-3" role="tab" data-toggle="tab"><i class="fa fa-user" aria-hidden="true"></i> Danh sách sinh viên trúng tuyển</a></li>			
 		</ul>
 		<div class="tab-content panel-body">
 			<!--------------Sửa doanh nghiệp------------>
@@ -74,16 +74,16 @@
 										<th>download CV</th>									
 									</tr>
 								</thead>
-								<tbody id="tableChiTietDN">
+								<tbody id="tableSv-ung-tuyen">
 									<tr data-toggle="popover">
 										<td>001</td>
 										<td>51101111</td>
 										<td>Nguyễn Văn A</td>
 										<td>
-											<select>
-												<option>Rồi</option>
-												<option>Chưa</option>
-											</select>
+											<select name="agree">
+													<option value="yes">Rồi</option>
+													<option value="no">Chưa</option>
+											</select>	
 										</td>
 										<td>Chưa</td>
 										<td><button class="btn btn-download btn-info radius-5">download</button></td>														
@@ -93,9 +93,9 @@
 										<td>51102222</td>
 										<td>Nguyễn Văn B</td>
 										<td>
-											<select>
-													<option>Rồi</option>
-													<option>Chưa</option>
+											<select name="agree">
+													<option value="yes">Rồi</option>
+													<option value="no">Chưa</option>
 											</select>											
 										</td>
 										<td>Chưa</td>
@@ -106,10 +106,10 @@
 										<td>51103333</td>
 										<td>Nguyễn Văn C</td>
 										<td>
-											<select>
-												<option>Rồi</option>
-												<option>Chưa</option>
-											</select>
+											<select name="agree">
+													<option value="yes">Rồi</option>
+													<option value="no">Chưa</option>
+											</select>	
 										</td>
 										<td>Chưa</td>
 										<td><button class="btn btn-download btn-info radius-5">Download</button></td>														
@@ -121,8 +121,60 @@
 				</div>
 
 				<div class="form-group col-md-12">
-					<p class=""><button type="submit" class="btn btn-primary radius-5" style="float: left">Lưu</button><span><button class="btn btn-secondary radius-5" style="float: right"> Phản hồi về trường</button></span></p>
+					<p class=""><button type="submit" class="btn btn-primary radius-5" style="float: left">Lưu</button><span><button id="feedbackToUniversity" class="btn btn-secondary radius-5" style="float: right"> Phản hồi về trường</button></span></p>
 				</div>
+			</div>
+			<!--------------End danh sách sinh viên ứng tuyển------------>
+
+			<div class="tab-pane" role="tabpanel" id="tab-3">				
+				<h3>Danh sách sinh viên trúng tuyển</h3>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="table-responsive">
+							<table id="" class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr class="bg-primary">
+										<th>Số thứ tự</th>
+										<th>Mã số sinh viên</th>
+										<th>Họ Tên</th>
+										<th>Vị trí</th>
+										<td>SV chấp nhận?</td>
+										<th>Số ĐTDĐ</th>																		
+									</tr>
+								</thead>
+								<tbody id="tableSV-trung-tuyen">
+									<tr data-toggle="popover">
+										<td>001</td>
+										<td>51101111</td>
+										<td>Nguyễn Văn A</td>
+										<td>Mobile developer</td>
+										<td>Rồi</td>
+										<td>0167892345</td>		
+									</tr>
+									<tr data-toggle="popover">
+										<td>002</td>
+										<td>51102222</td>
+										<td>Nguyễn Văn B</td>
+										<td>Mobile developer</td>
+										<td>Rồi</td>
+										<td>0193872345</td>
+									</tr>
+									<tr data-toggle="popover">
+										<td>003</td>
+										<td>51103333</td>
+										<td>Nguyễn Văn C</td>
+										<td>Web developer</td>
+										<td>Chưa</td>
+										<td>0168192345</td>				
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				
 			</div>
 			<!--------------End danh sách sinh viên------------>			
 						

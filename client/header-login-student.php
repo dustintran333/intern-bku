@@ -3,8 +3,7 @@
         <div class="container-fluid">            
             <div class="collapse navbar-collapse" >
                 <a href="index.php"><img width="40" height="40" src="images/logo.png" style="margin:5px 0px"></a>
-                <ul class="nav navbar-nav navbar-right">
-                    
+                <ul class="nav navbar-nav navbar-right">                    
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="truyencv-icon icon-user"></i> <span class="truyencv-login-title fs-20 color-black">51201999</span> <span class="caret"></span> </a>
                         <ul class="dropdown-menu">                            

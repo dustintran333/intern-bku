@@ -38,11 +38,23 @@
 					<input name="ma_so" class="form-control" type="text" style="" placeholder="" disabled>
 				</div>
 
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Email</span></div>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="" >
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Số ĐTDĐ</span></div>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="">
+				</div>
+
+				<div class="form-group input-group col-md-12">
+					<div class="input-group-addon" style="width: 120px;"><span>Địa chỉ</span></div>
+					<input name="ma_so" class="form-control" type="text" style="" placeholder="">
+				</div>
+
 				<div class="form-group">Ngày sinh<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
-
-				<div class="form-group">Deadline ứng tuyển<input type="date" name="deadline1" class="radius-5 ml-10" style="border: 1px solid gray;"></div>
-
-				<div class="form-group">Deadline chọn doanh nghiệp <input type="date" name="deadline2" class="radius-5 ml-10" style="border: 1px solid gray;"></div>														
+															
 								
 				<div class="form-group input-group col-md-12">					
 					<textarea rows="6" class="form-control" id="" style="border-radius:5px;">Ghi chú bản thân</textarea>  
@@ -101,36 +113,7 @@
 											<input class="" type="radio"  name="choice" value="enable">
 										</td>																			
 									</tr>
-									<tr data-toggle="popover3">
-										<td>003</td>
-										<td>VNG</td>										
-										<td>29/05/2018</td>
-										<td>12/06/2018</td>
-										<td>Rồi</td>
-										<td>
-											<input class="" type="radio"  name="choice" value="enable">
-										</td>																			
-									</tr>
-									<tr data-toggle="popover3">
-										<td>003</td>
-										<td>VNG</td>										
-										<td>29/05/2018</td>
-										<td>12/06/2018</td>
-										<td>Rồi</td>
-										<td>
-											<input class="" type="radio"  name="choice" value="enable">
-										</td>																			
-									</tr>
-									<tr data-toggle="popover3">
-										<td>003</td>
-										<td>VNG</td>										
-										<td>29/05/2018</td>
-										<td>12/06/2018</td>
-										<td>Rồi</td>
-										<td>
-											<input class="" type="radio"  name="choice" value="enable">
-										</td>																			
-									</tr>
+									
 								</tbody>
 							</table>
 						</div>

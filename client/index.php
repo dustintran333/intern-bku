@@ -10,7 +10,7 @@
 </head>
 
 <body class="own-style own-margin">
-	<?php include 'header.php' ?>
+	<?php include 'header-login-student.php' ?>
 
 	<section class="">
 		<div class="container-fluid main-background" style="padding: 0px 0px 30px 0px;">
@@ -124,7 +124,7 @@
 	</section>
 
 	<div id="id01" class="modal">  
-	  	<form class="radius-5 form-modified animate" action="/action_page.php">
+	  	<form id="loginForm" class="radius-5 form-modified animate" method="post" action="/login">
 			<div class="text-center mb-30" >
 				<h2 class="font-w-300 fs-42 color-white ">Log in</h2>
 				<p class="text-center color-gray fs-17 line-h ">Log in to BK intern management system</p>			
